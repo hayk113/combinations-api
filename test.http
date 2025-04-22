@@ -1,0 +1,56 @@
+@api = http://localhost:3000/api
+
+### Test 1
+POST {{api}}/generate
+Content-Type: application/json
+
+{
+    "items": [1, 2, 1],
+    "length": 2
+}
+
+### Test 2: 
+POST {{api}}/generate
+Content-Type: application/json
+
+{
+  "items": [1, 2, 3, 4, 5],
+  "length": 3
+}
+
+### Test 3
+POST {{api}}/generate
+Content-Type: application/json
+
+{
+  "items": [1, 2, 1, 4, 3],
+  "length": 3
+}
+
+### Test 4
+POST {{api}}/generate
+Content-Type: application/json
+
+{
+  "items":  [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+  "length": 3
+}
+
+### Test 5
+POST {{api}}/generate
+Content-Type: application/json
+
+{
+  "items": [1, 6],
+  "length": 2
+}
+
+
+### Test 6
+POST {{api}}/generate
+Content-Type: application/json
+
+{
+  "items": [2, 2, 2, 2],
+  "length": 2
+}
