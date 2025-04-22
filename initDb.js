@@ -43,9 +43,10 @@ async function initializeDatabase() {
         // Create tables individually
         await connection.query(`
             CREATE TABLE IF NOT EXISTS items (
-                item_name VARCHAR(10),
-                PRIMARY KEY (item_name)
-            ) ENGINE=InnoDB CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci
+                id INT AUTO_INCREMENT PRIMARY KEY,
+                item_name VARCHAR(10) NOT NULL,
+                UNIQUE(item_name)
+            )
         `);
         console.log('Items table created or already exists');
 
